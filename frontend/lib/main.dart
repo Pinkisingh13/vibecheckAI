@@ -39,8 +39,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('AI Vibe Check')),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(16),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Form(
               key: formKey,
@@ -62,11 +64,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       hintText: 'e.g. My boss yelled at me today',
                     ),
                   ),
-                  ElevatedButton(onPressed: () {
-                    if(formKey.currentState!.validate()){
-                      context.read<HomeScreenProvider>().vibeCheck(nameController.text);
-                    }
-                  }, child: Text("Vibe Check")),
+                  SizedBox(height: 16),
+                  ElevatedButton(
+                    onPressed: () {
+                      if (formKey.currentState!.validate()) {
+                        context.read<HomeScreenProvider>().vibeCheck(
+                          nameController.text,
+                        );
+                      }
+                    },
+                    child: Text("Vibe Check"),
+                  ),
                 ],
               ),
             ),
