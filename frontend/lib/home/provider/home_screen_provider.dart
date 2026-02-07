@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class HomeScreenProvider extends ChangeNotifier {
+  final TextEditingController textController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
   bool isLoading = false;
   String result = "";
 
@@ -11,7 +13,7 @@ class HomeScreenProvider extends ChangeNotifier {
     try {
       isLoading = true;
       notifyListeners();
-      print("Body text: $text");
+      debugPrint("Body text: $text");
       final response = await http.post(
         Uri.parse("http://192.168.1.7:8000/vibecheck"),
         headers: {"Content-Type": "application/json"},
@@ -20,7 +22,7 @@ class HomeScreenProvider extends ChangeNotifier {
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
         
-        print(data);
+        debugPrint(data);
         result = data['message'];
         isLoading = false;
         notifyListeners();
