@@ -1,6 +1,6 @@
 # VibeCheck AI 🎭
 
-A simple mood analyzer app that detects the sentiment of your text using AI. ⭐ **If you find this project helpful, please give it a star!**
+A simple vibe analyzer app that detects the sentiment of your text using AI. ⭐ **If you find this project helpful, please give it a star!**
 
 🔗 **Live Demo**: [https://check-my-vibe.netlify.app](https://check-my-vibe.netlify.app)
 
