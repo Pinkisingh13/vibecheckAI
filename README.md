@@ -2,7 +2,12 @@
 
 An AI-powered mood analyzer app built with **Flutter** and **FastAPI**.
 
-Tell the app how you're feeling, and it uses Python's `TextBlob` library to analyze the sentiment and give you a "Vibe Check" result with an appropriate emoji.
+## 🌐 Live Demo
+Check out the live app here: **[https://check-my-vibe.netlify.app](https://check-my-vibe.netlify.app)**
+
+> **Deployed with:**
+> - **Frontend**: Netlify (Flutter Web)
+> - **Backend**: Render (FastAPI)
 
 ## 🚀 Features
 - **Sentiment Analysis**: Uses Natural Language Processing (NLP) to determine if your vibe is Positive, Negative, or Neutral.
