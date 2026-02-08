@@ -1,61 +1,56 @@
 # VibeCheck AI 🎭
 
-An AI-powered mood analyzer app built with **Flutter** and **FastAPI**.
+A simple mood analyzer app that detects the sentiment of your text using AI. ⭐ **If you find this project helpful, please give it a star!**
 
-## 🌐 Live Demo
-Check out the live app here: **[https://check-my-vibe.netlify.app](https://check-my-vibe.netlify.app)**
+🔗 **Live Demo**: [https://check-my-vibe.netlify.app](https://check-my-vibe.netlify.app)
 
-> **Deployed with:**
-> - **Frontend**: Netlify (Flutter Web)
-> - **Backend**: Render (FastAPI)
+## Demo
 
-## 🚀 Features
-- **Sentiment Analysis**: Uses Natural Language Processing (NLP) to determine if your vibe is Positive, Negative, or Neutral.
-- **Cross-Platform**: Runs on Android, iOS, and Web (Flutter).
-- **Fast Backend**: Powered by FastAPI for high-performance API handling.
+![App Demo](app_demo.gif)
 
-## 🛠️ Tech Stack
-- **Frontend**: Flutter (Dart)
-- **Backend**: Python (FastAPI, TextBlob)
+## About This Project
 
-## 📦 Setup & Installation
+This is my second project while learning Python FastAPI, combined with Flutter for the frontend. I built this to understand the basics of AI and Natural Language Processing (NLP).
 
-### 1. Backend Setup
-Navigate to the `backend` folder and install dependencies:
+### What I Learned
 
+- **TextBlob**: A popular Python package for processing textual data. It comes with a pre-trained model that has already analyzed millions of sentences, so it understands language patterns and sentiment without any additional training.
+- **NLP (Natural Language Processing)**: The technology that allows computers to understand and interpret human language.
+- **FastAPI**: A modern, fast Python web framework for building APIs.
+- **Flutter Web**: Cross-platform UI framework for building web applications.
+
+## Tech Stack
+
+| Component | Technology |
+|-----------|------------|
+| Frontend | Flutter (Dart) |
+| Backend | Python (FastAPI + TextBlob) |
+| Frontend Hosting | Netlify |
+| Backend Hosting | Render |
+
+## How It Works
+
+1. User enters text in the app
+2. Text is sent to the FastAPI backend
+3. TextBlob analyzes the sentiment using NLP
+4. Returns whether the vibe is **Positive**, **Negative**, or **Neutral**
+
+## Local Setup
+
+### Backend
 ```bash
 cd backend
 pip install -r requirements.txt
-```
-
-Run the server:
-
-```bash
 uvicorn server:app --reload --host 0.0.0.0 --port 8000
 ```
 
-> **Note**: The server runs on port `8000`.
-
-### 2. Frontend Setup
-Navigate to the `frontend` folder and get packages:
-
+### Frontend
 ```bash
 cd frontend
 flutter pub get
-```
-
-### 3. Update API URL
-If running on an Android Emulator, the default URL in `lib/home/provider/home_screen_provider.dart` might need to be changed to `http://10.0.2.2:8000/vibecheck`.
-For physical devices, use your computer's local IP address (e.g., `http://192.168.1.X:8000/vibecheck`).
-
-Run the app:
-
-```bash
 flutter run
 ```
 
-## 📸 Screenshots
-*(Add your screenshots here)*
-
 ---
-Made with ❤️ by [Your Name]
+
+### A learning project exploring AI basics with Python, FastAPI and Flutter
