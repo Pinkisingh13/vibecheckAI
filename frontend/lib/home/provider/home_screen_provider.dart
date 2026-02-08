@@ -21,20 +21,20 @@ class HomeScreenProvider extends ChangeNotifier {
       );
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
-        
-        debugPrint(data);
+
+        debugPrint(data.toString());
         result = data['message'];
         isLoading = false;
         notifyListeners();
         return result;
       } else {
-        result = "Something went wrong";
+        result = "Error: ${response.statusCode} ${response.reasonPhrase}";
         isLoading = false;
         notifyListeners();
         return result;
       }
     } catch (e) {
-      result = "Something went wrong";
+      result = "Error: $e";
       isLoading = false;
       notifyListeners();
       return result;
